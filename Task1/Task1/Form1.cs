@@ -34,14 +34,14 @@ namespace Task1
                 MessageBox.Show("Длинна пароля должна быть более 8 знаков!");
             }
             else
-             if (textBoxPass1.Text == textBoxPass2.Text && !(textBoxLogin.Text == "admin"))
+             if (textBoxPass1.Text == textBoxPass2.Text)
             {
                 MessageBox.Show("Name: " + textBoxName.Text +
                     "\nLogin: " + textBoxLogin.Text +
                     "\nPassword: " + textBoxPass1.Text);
 
             }
-            else if (textBoxPass1.Text != textBoxPass2.Text && !(textBoxLogin.Text == "admin"))
+            else if (textBoxPass1.Text != textBoxPass2.Text)
             {
                 MessageBox.Show(textBoxName.Text + " введите верно пароль");
             } else
