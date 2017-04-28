@@ -19,26 +19,33 @@ namespace Task1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           if (textBoxLogin.Text == "admin" && textBoxPass1.Text == "pt2017" && textBoxPass2.Text == "pt2017")
+            if (textBoxLogin.Text == "admin" || textBoxLogin.Text == "pt2017")
             {
-                MessageBox.Show(textBoxName.Text + " введите другой логин и пароль");
-            } else
-            if ( textBoxName.Text == " " ||textBoxLogin.Text == "" || textBoxPass1.Text == "" || textBoxPass2.Text == "")
+                MessageBox.Show(textBoxName.Text + " введите другой логин");
+            }
+            else
+             if (textBoxName.Text == " " || textBoxLogin.Text == "" || textBoxPass1.Text == "" || textBoxPass2.Text == "")
             {
                 MessageBox.Show("извините введенные вами регистрационные данные не распознаны!");
-            } else
-            if (textBoxPass1.Text.Length <=8 && Text.Length <= 8)
+            }
+            else
+             if (textBoxPass1.Text.Length <= 8 && Text.Length <= 8)
             {
                 MessageBox.Show("Длинна пароля должна быть более 8 знаков!");
-            } else 
-            if (textBoxPass1.Text == textBoxPass2.Text && !(textBoxLogin.Text == "admin"))
+            }
+            else
+             if (textBoxPass1.Text == textBoxPass2.Text && !(textBoxLogin.Text == "admin"))
             {
                 MessageBox.Show("Name: " + textBoxName.Text +
                     "\nLogin: " + textBoxLogin.Text +
                     "\nPassword: " + textBoxPass1.Text);
-               
-            } else
+
+            }
+            else if (textBoxPass1.Text != textBoxPass2.Text && !(textBoxLogin.Text == "admin"))
             {
+                MessageBox.Show(textBoxName.Text + " введите верно пароль");
+            } else
+                {
                 MessageBox.Show(textBoxName.Text + " введите другой логин");
             }
         }
